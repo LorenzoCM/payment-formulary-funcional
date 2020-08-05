@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>HTM5 FORM VALIDATION</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <form class="form">
+                    <div class="card">
+                        <div class="card-header">
+                            Payment Form Example
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <input id="alerta" type="text" class="form-control rosada" id="inputEmail4"
+                                        placeholder="Some fields are missing">
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label for="inputEmail4">Card #</label>
+                                    <input type="text" class="form-control tarjeta" id="inputEmail4" placeholder="XXXXXXXXX"
+                                        pattern="[0-9]{16}">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputPassword4">CVC #</label>
+                                    <input type="text" class="form-control" id="inputPassword4" placeholder="0000"
+                                        pattern="[0-9]{4}">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputPassword4">Amount</label><br>
+                                    <!-- <i class="fas fa-dollar-sign"></i>--><input type="text" class="form-control"
+                                        id="inputPassword4" placeholder="Amount" pattern="[0-9]{1-12}">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress">First name</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="" pattern="[a-zA-Z]">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Last name</label>
+                                    <input type="text" class="form-control" id="inputAddress2"
+                                        placeholder="" pattern="[a-zA-Z]">
+                                </div>
+                                <div class="form-row col-md-12">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity" pattern="[a-zA-Z0-9]">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputState">State</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Pick a State</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputZip">Postal Code</label>
+                                        <input type="text" class="form-control" id="inputZip" placeholder="Zip Code" pattern="[0-9]">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>We accept:</p>
+                                    <div class="col-md-6 d-flex badges">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label mr-4" for="customRadio1"><i
+                                                    class="fab fa-cc-mastercard"></i></label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label mr-4" for="customRadio2"><i
+                                                    class="fab fa-cc-visa"></i></label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio3" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label mr-4" for="customRadio3"><i
+                                                    class="fab fa-cc-diners-club"></i></label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio4" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label mr-4" for="customRadio4"><i
+                                                    class="fab fa-cc-amex"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Message</p>
+                                    <textarea class="form-control" name="message" cols="69" rows="4"
+                                        placeholder="Optional"></textarea>
+                                    <p class="add-notes">Add any notes here.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-end">
+                                <a href="#" class="btn btn-secondary mr-3">Cancel</a>
+                                <button type="submit" class="btn btn-primary submit">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
